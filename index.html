@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Akif Hameed — Machine Learning Engineer & Full-Stack Developer. Digital CV." />
+    <title>Akif Hameed — Machine Learning Engineer & Full-Stack Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+    <!-- Top navigation -->
+    <header class="topbar">
+        <div class="container topbar__inner">
+            <a class="brand" href="#top">
+                <span class="brand__mark">AH</span>
+                <span class="brand__name">Akif Hameed</span>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <a class="btn btn--ghost btn--sm" href="https://github.com/akifhameed" target="_blank" rel="noopener">GitHub &rarr;</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="top" class="hero">
+        <div class="container hero__inner">
+            <p class="hero__eyebrow">Available for opportunities &middot; London, UK</p>
+            <h1 class="hero__title">
+                Hi, I'm <span class="accent">Akif Hameed</span>.<br />
+                I build <span class="accent">ML systems</span> and the <span class="accent">products</span> they live inside.
+            </h1>
+            <p class="hero__lede">
+                Machine Learning Engineer and full-stack developer. I design end-to-end data
+                products &mdash; from the model and the API that serves it, to the UI users
+                actually see &mdash; and ship them on cloud-native, containerised infrastructure.
+            </p>
+            <div class="hero__cta">
+                <a class="btn btn--primary" href="#projects">View Projects</a>
+                <a class="btn btn--ghost" href="#contact">Get in Touch</a>
+            </div>
+            <div class="hero__meta">
+                <span><strong>3+</strong> production-grade projects</span>
+                <span class="dot" aria-hidden="true"></span>
+                <span>Python &middot; FastAPI &middot; React</span>
+                <span class="dot" aria-hidden="true"></span>
+                <span>Docker &middot; Kubernetes &middot; CI/CD</span>
+            </div>
+        </div>
+    </section>
+
+    <main class="container main">
+        <!-- About -->
+        <section id="about" class="section">
+            <header class="section__header">
+                <p class="section__kicker">01 &mdash; About</p>
+                <h2 class="section__title">A pragmatic engineer who ships.</h2>
+            </header>
+            <div class="grid grid--2">
+                <div class="prose">
+                    <p>
+                        I'm a postgraduate computing student at London South Bank University
+                        with a strong focus on applied machine learning and cloud-native
+                        delivery. My work spans the full delivery pipeline: training and
+                        serving predictive models, building the APIs and front-ends around
+                        them, then containerising and orchestrating the whole stack so it
+                        runs reliably anywhere.
+                    </p>
+                    <p>
+                        I learn by building. Every project on this site is a complete
+                        end-to-end system &mdash; not a notebook in isolation &mdash; because
+                        I care about what happens after the model leaves the lab.
+                    </p>
+                </div>
+                <aside class="card card--quiet">
+                    <h3 class="card__title">Quick facts</h3>
+                    <dl class="facts">
+                        <div><dt>Role</dt><dd>ML Engineer / Full-Stack</dd></div>
+                        <div><dt>Location</dt><dd>London, United Kingdom</dd></div>
+                        <div><dt>Currently</dt><dd>MSc Computing &mdash; LSBU</dd></div>
+                        <div><dt>Focus</dt><dd>ML systems, DevOps, RAG / LLMs</dd></div>
+                        <div><dt>Open to</dt><dd>Internships, junior ML roles</dd></div>
+                    </dl>
+                </aside>
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="section">
+            <header class="section__header">
+                <p class="section__kicker">02 &mdash; Skills</p>
+                <h2 class="section__title">The tools I reach for.</h2>
+            </header>
+
+            <div class="grid grid--3">
+                <div class="card">
+                    <h3 class="card__title">Machine Learning &amp; Data</h3>
+                    <ul class="chips">
+                        <li>Python</li>
+                        <li>scikit-learn</li>
+                        <li>LightGBM</li>
+                        <li>PyTorch</li>
+                        <li>Pandas</li>
+                        <li>NumPy</li>
+                        <li>Jupyter</li>
+                        <li>RAG / LLMs</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">Backend &amp; Web</h3>
+                    <ul class="chips">
+                        <li>FastAPI</li>
+                        <li>REST APIs</li>
+                        <li>React</li>
+                        <li>Vite</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                        <li>Bash</li>
+                    </ul>
+                </div>
+                <div class="card">
+                    <h3 class="card__title">DevOps &amp; Cloud</h3>
+                    <ul class="chips">
+                        <li>Docker</li>
+                        <li>Kubernetes</li>
+                        <li>Jenkins</li>
+                        <li>Git &amp; GitHub</li>
+                        <li>AWS EC2</li>
+                        <li>Linux</li>
+                        <li>Nginx</li>
+                        <li>CI/CD</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section">
+            <header class="section__header">
+                <p class="section__kicker">03 &mdash; Projects</p>
+                <h2 class="section__title">Selected work.</h2>
+                <p class="section__sub">
+                    Real projects, real repositories. Each one is shipped end-to-end &mdash;
+                    model, service, and interface.
+                </p>
+            </header>
+
+            <article class="project">
+                <div class="project__media" aria-hidden="true">
+                    <div class="project__shape">
+                        <span class="tag tag--accent">Featured</span>
+                        <pre class="project__snippet"><code>POST /predict
+{
+  "postcode": "SE1 6PB",
+  "bedrooms": 2,
+  "property_type": "flat"
+}
+
+200 OK
+{ "estimate_gbp": 412500 }</code></pre>
+                    </div>
+                </div>
+                <div class="project__body">
+                    <h3 class="project__title">House Price Predictor &mdash; England</h3>
+                    <p class="project__lede">
+                        AI-powered residential property valuation for England. A
+                        <strong>LightGBM</strong> model trained on UK Land Registry and
+                        ONS data, served behind a <strong>FastAPI</strong> backend, with a
+                        <strong>React + Vite</strong> front-end that turns the predictions
+                        into a clean valuation tool.
+                    </p>
+                    <ul class="project__highlights">
+                        <li>End-to-end ML system: ingestion &rarr; training &rarr; serving &rarr; UI.</li>
+                        <li>Productionised with a typed API and CORS-aware frontend.</li>
+                        <li>Modular project layout designed for retraining and redeployment.</li>
+                    </ul>
+                    <ul class="chips chips--stack">
+                        <li>Python</li>
+                        <li>LightGBM</li>
+                        <li>FastAPI</li>
+                        <li>React</li>
+                        <li>Vite</li>
+                        <li>Jupyter</li>
+                    </ul>
+                    <div class="project__links">
+                        <a class="btn btn--primary btn--sm" href="https://github.com/akifhameed/house_predict_england" target="_blank" rel="noopener">View on GitHub &rarr;</a>
+                    </div>
+                </div>
+            </article>
+
+            <p class="muted small">More projects shipping soon &mdash; this CV is itself deployed via the same containerised pipeline I build with.</p>
+        </section>
+
+        <!-- Experience / Education -->
+        <section id="experience" class="section">
+            <header class="section__header">
+                <p class="section__kicker">04 &mdash; Education</p>
+                <h2 class="section__title">Where I've trained.</h2>
+            </header>
+            <ol class="timeline">
+                <li class="timeline__item">
+                    <div class="timeline__date">2025 &ndash; Present</div>
+                    <div class="timeline__body">
+                        <h3>MSc Computing</h3>
+                        <p class="muted">London South Bank University &middot; London, UK</p>
+                        <p>
+                            Specialising in cloud-native systems, container orchestration
+                            and applied machine learning. Coursework covers Linux containers,
+                            Docker, Kubernetes, Jenkins CI/CD and AWS.
+                        </p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="section section--contact">
+            <header class="section__header">
+                <p class="section__kicker">05 &mdash; Contact</p>
+                <h2 class="section__title">Let's build something.</h2>
+            </header>
+            <div class="contact">
+                <p class="contact__lede">
+                    The fastest way to reach me is GitHub. I read every message and
+                    reply within a day.
+                </p>
+                <div class="contact__buttons">
+                    <a class="btn btn--primary" href="https://github.com/akifhameed" target="_blank" rel="noopener">GitHub /akifhameed</a>
+                    <a class="btn btn--ghost" href="mailto:akif@example.com">Email me</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer__inner">
+            <p>&copy; 2026 Akif Hameed. Built with HTML &amp; CSS, served by Nginx, containerised with Docker, orchestrated by Kubernetes.</p>
+        </div>
+    </footer>
+</body>
+</html>
