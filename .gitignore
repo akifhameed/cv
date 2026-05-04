@@ -1,0 +1,57 @@
+# ==========================
+# Operating system files
+# ==========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ==========================
+# Environment / secret files
+# ==========================
+.env
+*.env
+*.pem
+*.key
+*.crt
+*.p12
+
+# ==========================
+# Logs
+# ==========================
+*.log
+logs/
+
+# ==========================
+# Editor / IDE folders
+# ==========================
+.vscode/
+.idea/
+
+# ==========================
+# Dependencies
+# ==========================
+node_modules/
+
+# ==========================
+# Docker / temporary files
+# ==========================
+*.tar
+*.zip
+*.tmp
+
+# ==========================
+# AWS / SSH private files
+# ==========================
+*.ppk
+*.pub
+id_rsa
+id_rsa.pub
+
+# ==========================
+# Coursework/private files
+# ==========================
+Coursework_Specs_CSI_7_COD_2526_Updated.pdf
+Coursework_Specs_CSI_7_COD_2526_Updated
+*.docx
+*.pptx
+screenshots/
