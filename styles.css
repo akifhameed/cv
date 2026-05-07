@@ -146,6 +146,41 @@ p  { margin: 0 0 var(--space-4); color: var(--text-soft); }
     padding-bottom: var(--space-3);
 }
 
+/* ---------- LSBU university badge (left of personal brand) ---------- */
+.topbar__left {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-4);
+}
+
+.lsbu-badge {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-decoration: none;
+    color: var(--text);
+    line-height: 1;
+    padding-right: var(--space-4);
+    border-right: 1px solid var(--border);
+    transition: color 0.15s ease;
+}
+.lsbu-badge:hover { color: var(--accent-strong); }
+
+.lsbu-est {
+    font-size: 0.6rem;
+    letter-spacing: 0.14em;
+    color: var(--text-muted);
+    margin-bottom: 0.25rem;
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+}
+
+.lsbu-name {
+    font-size: 1.2rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+}
+
 .brand {
     display: inline-flex;
     align-items: center;
