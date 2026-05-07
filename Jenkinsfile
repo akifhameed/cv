@@ -1,26 +1,30 @@
 // Jenkinsfile — Declarative Pipeline as Code
-// Code Pull, Image Build, Push Image, Deploy.
+// Four stages: Code Pull, Image Build, Push Image, Deploy.
+// Stage 4 deploys to BOTH:
+
 pipeline {
     agent any
+
     environment {
-        IMAGE_NAME = 'akifhameed/cv'
-        IMAGE_TAG  = "${env.BUILD_NUMBER}"
+        IMAGE_NAME       = 'akifhameed/cv'
+        IMAGE_TAG        = "${env.BUILD_NUMBER}"
+        EC2_1_PRIVATE_IP = '172.31.80.6'   // private IP
     }
+
     stages {
 
-        // Stage 1 of 4 — Code Pull
         stage('Code Pull') {
             steps {
                 checkout scm
             }
         }
-        // Stage 2 of 4 — Image Build
+
         stage('Image Build') {
             steps {
                 sh 'docker build -t ${IMAGE_NAME}:${IMAGE_TAG} .'
             }
         }
-        // Stage 3 of 4 — Push Image
+
         stage('Push Image') {
             steps {
                 withCredentials([usernamePassword(
@@ -32,11 +36,20 @@ pipeline {
                 }
             }
         }
-        // Stage 4 of 4 — Deploy
+
         stage('Deploy') {
             steps {
                 sh 'docker rm -f portfolio-cv-pipeline || true'
                 sh 'docker run -d --name portfolio-cv-pipeline -p 8081:80 ${IMAGE_NAME}:${IMAGE_TAG}'
+
+                sh '''
+                    ssh -o StrictHostKeyChecking=no ec2-user@${EC2_1_PRIVATE_IP} \
+                        "kubectl set image deployment/portfolio-cv-deployment \
+                         portfolio-cv=${IMAGE_NAME}:${IMAGE_TAG}"
+
+                    ssh -o StrictHostKeyChecking=no ec2-user@${EC2_1_PRIVATE_IP} \
+                        "kubectl rollout status deployment/portfolio-cv-deployment --timeout=120s"
+                '''
             }
         }
     }
