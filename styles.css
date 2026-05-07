@@ -6,18 +6,18 @@
 
 /* ---------- Design tokens ---------- */
 :root {
-    /* Colour system */
-    --bg:           #0b1020;          /* page background */
-    --bg-elev-1:    #11172c;          /* card surface */
-    --bg-elev-2:    #161d36;          /* hovered surface */
-    --border:       #1f2747;
-    --text:         #e8ecf6;
-    --text-muted:   #9aa3bf;
-    --text-soft:    #c5cbe0;
-    --accent:       #6aa6ff;          /* primary accent */
-    --accent-strong:#84b8ff;
-    --accent-soft:  rgba(106, 166, 255, 0.12);
-    --success:      #58d68d;
+    /* Colour system — teal/emerald accent on deep navy-black */
+    --bg:           #08111c;          /* page background — deeper for more drama */
+    --bg-elev-1:    #0f1928;          /* card surface */
+    --bg-elev-2:    #16243d;          /* hovered / raised surface */
+    --border:       #1f3552;          /* teal-tinted slate */
+    --text:         #eaf0fa;
+    --text-muted:   #8a96b5;
+    --text-soft:    #bfcce0;
+    --accent:       #2dd4bf;          /* primary accent — vivid teal */
+    --accent-strong:#5eead4;          /* lighter teal */
+    --accent-soft:  rgba(45, 212, 191, 0.14);
+    --success:      #34d399;
 
     /* Type scale */
     --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -42,8 +42,8 @@
     /* Effects */
     --shadow-card: 0 1px 0 rgba(255,255,255,0.04) inset,
                    0 8px 24px rgba(0, 0, 0, 0.25);
-    --shadow-glow: 0 0 0 1px rgba(106, 166, 255, 0.35),
-                   0 8px 30px rgba(106, 166, 255, 0.15);
+    --shadow-glow: 0 0 0 1px rgba(45, 212, 191, 0.35),
+                   0 8px 30px rgba(45, 212, 191, 0.15);
 }
 
 /* ---------- Reset / base ---------- */
@@ -57,8 +57,8 @@ body {
     font-size: 16px;
     line-height: 1.6;
     color: var(--text);
-    background: radial-gradient(1200px 600px at 20% -10%, rgba(106,166,255,0.10), transparent 60%),
-                radial-gradient(900px 500px at 100% 10%, rgba(132, 184, 255, 0.06), transparent 60%),
+    background: radial-gradient(1200px 600px at 20% -10%, rgba(45, 212, 191, 0.12), transparent 60%),
+                radial-gradient(900px 500px at 100% 10%, rgba(94, 234, 212, 0.07), transparent 60%),
                 var(--bg);
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
@@ -133,7 +133,7 @@ p  { margin: 0 0 var(--space-4); color: var(--text-soft); }
     top: 0;
     z-index: 50;
     backdrop-filter: blur(10px);
-    background: rgba(11, 16, 32, 0.72);
+    background: rgba(8, 17, 28, 0.78);
     border-bottom: 1px solid var(--border);
 }
 
@@ -162,8 +162,8 @@ p  { margin: 0 0 var(--space-4); color: var(--text-soft); }
     border-radius: 10px;
     font-family: var(--font-mono);
     font-weight: 700;
-    background: linear-gradient(135deg, #2a4a8c, #6aa6ff);
-    color: #fff;
+    background: linear-gradient(135deg, #0d9488, #2dd4bf);
+    color: #04141a;
     box-shadow: var(--shadow-card);
 }
 
@@ -333,7 +333,7 @@ p  { margin: 0 0 var(--space-4); color: var(--text-soft); }
     transition: border-color 0.15s ease, transform 0.15s ease;
 }
 .project:hover {
-    border-color: rgba(106, 166, 255, 0.45);
+    border-color: rgba(45, 212, 191, 0.5);
     transform: translateY(-2px);
 }
 
@@ -351,7 +351,7 @@ p  { margin: 0 0 var(--space-4); color: var(--text-soft); }
 
 .project__shape {
     background:
-        linear-gradient(135deg, rgba(106,166,255,0.20), rgba(132,184,255,0.05)),
+        linear-gradient(135deg, rgba(45, 212, 191, 0.22), rgba(94, 234, 212, 0.06)),
         var(--bg-elev-2);
     border: 1px solid var(--border);
     border-radius: var(--radius);
@@ -392,7 +392,7 @@ p  { margin: 0 0 var(--space-4); color: var(--text-soft); }
 }
 .tag--accent {
     color: var(--accent);
-    border-color: rgba(106, 166, 255, 0.4);
+    border-color: rgba(45, 212, 191, 0.4);
     background: var(--accent-soft);
 }
 
