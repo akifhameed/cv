@@ -1,0 +1,30 @@
+# Kubernetes Service for the portfolio-cv application.
+# This exposes the portfolio-cv Pods using NodePort.
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: portfolio-cv-service
+  labels:
+    app: portfolio-cv
+
+spec:
+  # Accessible via NodePort or LoadBalancer.
+  type: NodePort
+
+  # The Service sends traffic to Pods with this label.
+  selector:
+    app: portfolio-cv
+
+  ports:
+    - name: http
+      protocol: TCP
+
+      # Service port inside the Kubernetes cluster.
+      port: 8081
+
+      # Container port where Nginx listens.
+      targetPort: 80
+
+      # External node port. Must be between 30000 and 32767.
+      nodePort: 30081

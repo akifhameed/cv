@@ -1,0 +1,51 @@
+# Kubernetes Deployment for the portfolio-cv application.
+# This manages two identical Pods running the Nginx-based image previously pushed to Docker Hub.
+
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: portfolio-cv-deployment
+  labels:
+    app: portfolio-cv
+
+spec:
+  # Uses at least 2 replicas.
+  replicas: 2
+
+  # The Deployment manages Pods with this matching label.
+  selector:
+    matchLabels:
+      app: portfolio-cv
+
+  # Rolling updates.
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
+
+  # Pod template used by the Deployment.
+  template:
+    metadata:
+      labels:
+        app: portfolio-cv
+
+    spec:
+      containers:
+        - name: portfolio-cv
+          image: akifhameed/cv:1.0
+          imagePullPolicy: IfNotPresent
+
+          # Nginx listens on port 80 inside the container.
+          ports:
+            - containerPort: 80
+              name: http
+
+          # Coursework requirement: include resource limits.
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
